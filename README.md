@@ -132,5 +132,5 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir Issues ou enviar
 ---
 
 <div align="center">
-  <sub>Desenvolvido com 💙 por <a href="https://github.com/RiquelmeRafael">Rafael Riquelme</a></sub>
+  <sub>Desenvolvido com 💙 por <a href="https://github.com/RiquelmeRafael">Riquelme Rafael</a></sub>
 </div>
