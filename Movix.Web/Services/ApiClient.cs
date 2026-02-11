@@ -1,4 +1,4 @@
-﻿using System.Net.Http.Json;
+using System.Net.Http.Json;
 using System.Text;
 using Microsoft.Extensions.Caching.Memory;
 using Movix.Web.Models;
@@ -18,36 +18,66 @@ public class ApiClient : IApiClient
 
     public async Task<IReadOnlyList<(int Id, string Nome)>> GetGenerosAsync(CancellationToken ct = default)
     {
-        if (_cache.TryGetValue("generos", out IReadOnlyList<(int, string)>? cached) && cached is not null)
-            return cached;
+        try 
+        {
+            if (_cache.TryGetValue("generos", out IReadOnlyList<(int, string)>? cached) && cached is not null)
+                return cached;
 
-        var data = await _http.GetFromJsonAsync<List<Item>>("api/generos", ct) ?? new List<Item>();
-        var list = data.Select(x => (x.Id, x.Nome)).ToList().AsReadOnly();
-        _cache.Set("generos", list, TimeSpan.FromMinutes(10));
-        return list;
+            var data = await _http.GetFromJsonAsync<List<Item>>("api/generos", ct) ?? new List<Item>();
+            var list = data.Select(x => (x.Id, x.Nome)).ToList().AsReadOnly();
+            _cache.Set("generos", list, TimeSpan.FromMinutes(10));
+            return list;
+        }
+        catch
+        {
+            return new List<(int, string)>().AsReadOnly();
+        }
     }
 
     public async Task<IReadOnlyList<(int Id, string Nome)>> GetClassificacoesAsync(CancellationToken ct = default)
     {
-        if (_cache.TryGetValue("classificacoes", out IReadOnlyList<(int, string)>? cached) && cached is not null)
-            return cached;
+        try
+        {
+            if (_cache.TryGetValue("classificacoes", out IReadOnlyList<(int, string)>? cached) && cached is not null)
+                return cached;
 
-        var data = await _http.GetFromJsonAsync<List<Item>>("api/classificacoes", ct) ?? new List<Item>();
-        var list = data.Select(x => (x.Id, x.Nome)).ToList().AsReadOnly();
-        _cache.Set("classificacoes", list, TimeSpan.FromMinutes(10));
-        return list;
+            var data = await _http.GetFromJsonAsync<List<Item>>("api/classificacoes", ct) ?? new List<Item>();
+            var list = data.Select(x => (x.Id, x.Nome)).ToList().AsReadOnly();
+            _cache.Set("classificacoes", list, TimeSpan.FromMinutes(10));
+            return list;
+        }
+        catch
+        {
+            return new List<(int, string)>().AsReadOnly();
+        }
     }
 
     public async Task<PagedResult<FilmeDto>> SearchFilmesAsync(CatalogFilterVm f, CancellationToken ct = default)
     {
-        var qs = BuildQuery(f);
-        var res = await _http.GetFromJsonAsync<PagedResult<FilmeDto>>($"api/filmes{qs}", ct)
-                  ?? new PagedResult<FilmeDto>(1, 12, 0, Array.Empty<FilmeDto>());
-        return res;
+        try
+        {
+            var qs = BuildQuery(f);
+            var res = await _http.GetFromJsonAsync<PagedResult<FilmeDto>>($"api/filmes{qs}", ct)
+                      ?? new PagedResult<FilmeDto>(1, 12, 0, Array.Empty<FilmeDto>());
+            return res;
+        }
+        catch
+        {
+            return new PagedResult<FilmeDto>(1, 12, 0, Array.Empty<FilmeDto>());
+        }
     }
 
-    public Task<FilmeDto?> GetFilmeAsync(int id, CancellationToken ct = default)
-        => _http.GetFromJsonAsync<FilmeDto>($"api/filmes/{id}", ct);
+    public async Task<FilmeDto?> GetFilmeAsync(int id, CancellationToken ct = default)
+    {
+        try
+        {
+            return await _http.GetFromJsonAsync<FilmeDto>($"api/filmes/{id}", ct);
+        }
+        catch
+        {
+            return null;
+        }
+    }
 
     private static string BuildQuery(CatalogFilterVm f)
     {
