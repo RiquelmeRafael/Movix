@@ -64,7 +64,7 @@
 
 
 
-		<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top py-3" data-aos="fade-down" data-aos-duration="1500" style="background-color: #000 !important;">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top py-3" data-aos="fade-down" data-aos-duration="1500" style="background-color: #000 !important; height: auto !important; min-height: 80px;">
 			<div class="container">
 				<a class="navbar-brand" asp-controller="Home" asp-action="Index">
 					<img src='~/img/Logo.png' alt="Movix" style="height: 60px; width: auto;">
@@ -74,7 +74,7 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<div class="collapse navbar-collapse" id="navbarMovix">
+				<div class="collapse navbar-collapse" id="navbarMovix" style="background-color: #000 !important; z-index: 9999;">
 					<ul class="navbar-nav ms-auto align-items-center gap-3">
 						<li class="nav-item">
 							<a class="nav-link text-white fs-5" asp-controller="Home" asp-action="Index">Início</a>
@@ -96,10 +96,10 @@
 						}
 					</ul>
 
-					<div class="d-flex ms-lg-4 mt-3 mt-lg-0 align-items-center justify-content-center">
+					<div class="d-flex ms-lg-4 mt-3 mt-lg-0 align-items-center justify-content-center gap-3">
 						@if (User.Identity?.IsAuthenticated ?? false)
 						{
-							<a href="#" class="btn btn-outline-light rounded-pill px-4" onclick="document.getElementById('logout-form').submit();">
+							<a href="#" class="btn btn-danger rounded-pill px-4" onclick="document.getElementById('logout-form').submit();">
 								Sair (@User.Identity?.Name)
 							</a>
 							<form id="logout-form" asp-area="" asp-controller="Auth" asp-action="Logout" method="post" class="d-none">
