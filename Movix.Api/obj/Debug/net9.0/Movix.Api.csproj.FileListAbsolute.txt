@@ -549,3 +549,5 @@ C:\Users\regin\Downloads\Movix\Movix.Api\obj\Debug\net9.0\refint\Movix.Api.dll
 C:\Users\regin\Downloads\Movix\Movix.Api\obj\Debug\net9.0\Movix.Api.pdb
 C:\Users\regin\Downloads\Movix\Movix.Api\obj\Debug\net9.0\Movix.Api.genruntimeconfig.cache
 C:\Users\regin\Downloads\Movix\Movix.Api\obj\Debug\net9.0\ref\Movix.Api.dll
+C:\Users\regin\Downloads\Movix\Movix.Api\obj\Debug\net9.0\Movix.Api.sourcelink.json
+C:\Users\regin\Downloads\Movix\Movix.Api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

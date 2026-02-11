@@ -43,3 +43,4 @@ C:\Users\regin\Downloads\Movix\Movix.Application\obj\Debug\net9.0\Movix.Applicat
 C:\Users\regin\Downloads\Movix\Movix.Application\obj\Debug\net9.0\refint\Movix.Application.dll
 C:\Users\regin\Downloads\Movix\Movix.Application\obj\Debug\net9.0\Movix.Application.pdb
 C:\Users\regin\Downloads\Movix\Movix.Application\obj\Debug\net9.0\ref\Movix.Application.dll
+C:\Users\regin\Downloads\Movix\Movix.Application\obj\Debug\net9.0\Movix.Application.sourcelink.json

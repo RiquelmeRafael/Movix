@@ -244,3 +244,5 @@ C:\Users\regin\Downloads\Movix\Movix.Web\obj\Debug\net9.0\refint\Movix.Web.dll
 C:\Users\regin\Downloads\Movix\Movix.Web\obj\Debug\net9.0\Movix.Web.pdb
 C:\Users\regin\Downloads\Movix\Movix.Web\obj\Debug\net9.0\Movix.Web.genruntimeconfig.cache
 C:\Users\regin\Downloads\Movix\Movix.Web\obj\Debug\net9.0\ref\Movix.Web.dll
+C:\Users\regin\Downloads\Movix\Movix.Web\obj\Debug\net9.0\Movix.Web.sourcelink.json
+C:\Users\regin\Downloads\Movix\Movix.Web\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

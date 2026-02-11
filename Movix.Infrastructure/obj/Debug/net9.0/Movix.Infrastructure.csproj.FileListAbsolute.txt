@@ -55,3 +55,4 @@ C:\Users\regin\Downloads\Movix\Movix.Infrastructure\obj\Debug\net9.0\refint\Movi
 C:\Users\regin\Downloads\Movix\Movix.Infrastructure\obj\Debug\net9.0\Movix.Infrastructure.pdb
 C:\Users\regin\Downloads\Movix\Movix.Infrastructure\obj\Debug\net9.0\Movix.Infrastructure.genruntimeconfig.cache
 C:\Users\regin\Downloads\Movix\Movix.Infrastructure\obj\Debug\net9.0\ref\Movix.Infrastructure.dll
+C:\Users\regin\Downloads\Movix\Movix.Infrastructure\obj\Debug\net9.0\Movix.Infrastructure.sourcelink.json

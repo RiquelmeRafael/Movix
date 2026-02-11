@@ -1,4 +1,4 @@
-﻿@* refatorado fase 5 *@
+@* refatorado fase 5 *@
 
 <!DOCTYPE html>
 <html lang="pt-br" data-bs-theme="dark">
@@ -64,86 +64,56 @@
 
 
 
-		<nav data-aos="fade-down" data-aos-duration="1500">
-			<div class="menu">
-				<div class="logo">
-					<a href="#home">
-						<img src='~/img/Logo.png' alt="Movix" style="  height: 150px; width: auto;">
-					</a>
-				</div>
-				<ul class="navBar">
-					<li class="nav-item">
-						<a class="nav-link" asp-controller="Home" asp-action="Index">Início</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" asp-controller="Home" asp-action="Planos">Planos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" asp-controller="Home" asp-action="Filmes">Filmes</a>
-					</li>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top py-3" data-aos="fade-down" data-aos-duration="1500" style="background-color: #000 !important;">
+			<div class="container">
+				<a class="navbar-brand" asp-controller="Home" asp-action="Index">
+					<img src='~/img/Logo.png' alt="Movix" style="height: 60px; width: auto;">
+				</a>
+				
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMovix" aria-controls="navbarMovix" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-
-					@* Links de área conforme roles (aceita variações de nome do banco) *@
-
-					@if (User.Identity?.IsAuthenticated ?? false)
-
-					{
-
-						bool isAdmin = User.IsInRole("ADMIN") || User.IsInRole("Admin") || User.IsInRole("Administrador");
-
-						bool isGerente = User.IsInRole("GERENTE") || User.IsInRole("Gerente");
-
-						if (isAdmin)
-
-						{
-							<li class="nav-item"><a class="nav-link" href="/Admin/Dashboard">Gestão</a></li>
-
-						}
-
-
-						
-
-					}
-
-				</ul>
-				<ul class="login">
-
-
-					<li>
+				<div class="collapse navbar-collapse" id="navbarMovix">
+					<ul class="navbar-nav ms-auto align-items-center gap-3">
+						<li class="nav-item">
+							<a class="nav-link text-white fs-5" asp-controller="Home" asp-action="Index">Início</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white fs-5" asp-controller="Home" asp-action="Planos">Planos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white fs-5" asp-controller="Home" asp-action="Filmes">Filmes</a>
+						</li>
 
 						@if (User.Identity?.IsAuthenticated ?? false)
-
 						{
-							<a href="#" class="botao" onclick="document.getElementById('logout-form').submit();">
-								<span> Sair (@User.Identity?.Name)</span>
-							</a>
+							bool isAdmin = User.IsInRole("ADMIN") || User.IsInRole("Admin") || User.IsInRole("Administrador");
+							if (isAdmin)
+							{
+								<li class="nav-item"><a class="nav-link text-white fs-5" href="/Admin/Dashboard">Gestão</a></li>
+							}
+						}
+					</ul>
 
-							<form id="logout-form" asp-area=""  asp-controller="Auth" asp-action="Logout" method="post" class="d-none">
+					<div class="d-flex ms-lg-4 mt-3 mt-lg-0 align-items-center justify-content-center">
+						@if (User.Identity?.IsAuthenticated ?? false)
+						{
+							<a href="#" class="btn btn-outline-light rounded-pill px-4" onclick="document.getElementById('logout-form').submit();">
+								Sair (@User.Identity?.Name)
+							</a>
+							<form id="logout-form" asp-area="" asp-controller="Auth" asp-action="Logout" method="post" class="d-none">
 								@Html.AntiForgeryToken()
 							</form>
-
-
 						}
-
 						else
-
 						{
-							
-							<a class="botao" href="/Auth/Login"> <span>Perfil</span></a>
-								
-
+							<a class="btn btn-primary rounded-pill px-4 fw-bold" href="/Auth/Login" style="background: linear-gradient(90deg, #00E5FF, #2979FF, #AA00FF); border: none;">
+								Perfil
+							</a>
 						}
-
-					</li>
-
-
-
-
-				</ul>
-
-
-
-
+					</div>
+				</div>
 			</div>
 		</nav>
 

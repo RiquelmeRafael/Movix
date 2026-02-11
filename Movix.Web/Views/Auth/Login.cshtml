@@ -1,13 +1,16 @@
-﻿@model Movix.Web.Models.LoginVm
+@model Movix.Web.Models.LoginVm
 @{
     ViewData["Title"] = "Entrar";
 }
 
 <!-- VIDEO DE FUNDO FULLSCREEN -->
 <div class="video-bg">
-    <video autoplay muted loop playsinline id="bg-video" preload="auto">
+    @* O vídeo foi removido para reduzir o tamanho do repositório *@
+    @* <video autoplay muted loop playsinline id="bg-video" preload="auto">
         <source src="~/img/video 1.mp4" type="video/mp4">
-    </video>
+    </video> *@
+    <!-- Fallback image para não ficar preto -->
+    <img src="~/img/FundoHome.png" alt="Background" id="bg-video" style="object-fit: cover;" />
 </div>
 
 <!-- CONTEÚDO DA PÁGINA -->
@@ -103,16 +106,24 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         display: flex;
-        align-items: center;
         justify-content: center;
-      /*   backdrop-filter: blur(2px); */
         z-index: 10;
+        overflow-y: auto; /* Enable vertical scrolling */
+        padding: 40px 20px; /* Add padding for small screens */
+    }
+
+    /* Helper to center vertically with flex + overflow */
+    .login-background::before {
+        content: "";
+        min-height: 100%;
+        height: 100%;
     }
 
     .glass-card {
+        margin: auto; /* Centers card vertically and horizontally */
         background: rgba(255, 255, 255, 0.09);
         border: 1px solid rgba(255, 255, 255, 0.20);
         backdrop-filter: blur(14px);

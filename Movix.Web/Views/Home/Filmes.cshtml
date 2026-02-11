@@ -1,4 +1,4 @@
-﻿@model Movix.Web.Models.CatalogPageVm
+@model Movix.Web.Models.CatalogPageVm
 @{
 	ViewData["Title"] = "Catálogo de Filmes";
 	var f = Model.Filter;
@@ -10,19 +10,19 @@
 	<input type="hidden" name="GeneroId" value="@(f.GeneroId?.ToString() ?? "")" />
 	<input type="hidden" name="section" value="genres" />
 
-	<div class="busca row">
-		<div class="col-12 col-md-8 col-lg-6 mx-auto">
-			<div class="input-group">
+	<div class="busca row justify-content-center">
+		<div class="col-12 col-md-8 col-lg-6">
+			<div class="input-group shadow-lg rounded-pill overflow-hidden bg-dark border border-secondary">
 				<input type="text"
 					   name="Q"
-					   class="form-control"
+					   class="form-control bg-transparent text-white border-0 ps-4 py-3"
 					   value="@f.Q"
-					   placeholder="Digite o nome do filme..."
+					   placeholder="Pesquisar filmes, séries..."
+					   style="box-shadow: none;"
 					   aria-label="Buscar Filme" />
-				<button type="submit" class="btn btn-info d-flex align-items-center justify-content-center">
-					<i class="bi bi-search"></i>
+				<button type="submit" class="btn btn-primary px-4 d-flex align-items-center justify-content-center border-0" style="background: linear-gradient(45deg, #0d6efd, #0dcaf0);">
+					<i class="bi bi-search fs-5"></i>
 				</button>
-
 			</div>
 		</div>
 	</div>
@@ -391,6 +391,25 @@
 	.modal-footer {
 		background: transparent !important; /* remove fundo sólido */
 		border: none; /* remove linhas indesejadas */
+	}
+
+	@media (max-width: 768px) {
+		.busca {
+			margin-top: 90px;
+		}
+		.card-movie {
+			min-width: 150px !important;
+			max-width: 150px !important;
+		}
+		.card-movie img {
+			height: 225px !important;
+		}
+		.carousel-banner .carousel-item {
+			height: 35vh;
+		}
+		.btn-carousel-prev, .btn-carousel-next {
+			display: none; /* Hide arrows on mobile, use swipe */
+		}
 	}
 		
 		</style>

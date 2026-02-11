@@ -4,11 +4,13 @@
     "Projects": [
       {
         "Path": "Movix.Api\\Movix.Api.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": "http"
       },
       {
         "Path": "Movix.Web\\Movix.Web.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": "http"
       }
     ]
   }
