@@ -1,4 +1,4 @@
-# 🎬 Movix
+ 🎬 Movix
 
 > **Plataforma Moderna de Catálogo e Gestão de Filmes**
 
@@ -15,24 +15,24 @@ O **Movix** é uma aplicação web completa desenvolvida com as melhores prátic
 
 ### 🖼️ Imagens do site
 
-Home
+<h2>Home</h2>
 <img width="1891" height="867" alt="image" src="https://github.com/user-attachments/assets/5a65579e-e5b0-4524-82ac-c349fd1c3f16" />
 
 
-Catálogo 
+<h2>Catálogo</h2> 
 <img width="1862" height="893" alt="image" src="https://github.com/user-attachments/assets/f28de720-e6e5-45c1-8912-1bc68a733b63" />
 
-Filmes
+<h2>Filmes</h2>
 <img width="1867" height="852" alt="image" src="https://github.com/user-attachments/assets/c9c375e8-576e-4e21-b7f9-03046d6f4d21" />
 
 
-Dashboard Admin
+<h2>Dashboard Admin</h2>
 <img width="1895" height="882" alt="image" src="https://github.com/user-attachments/assets/fb640575-9573-4657-abc8-13a54c563fa7" />
 
-Gerenciamento
+<h2>Gerenciamento</h2>
 <img width="1870" height="840" alt="image" src="https://github.com/user-attachments/assets/f3982660-e54a-47b0-bc3c-44c946492d23" />
 
-Detalhes do Filme (Admin)
+<h2>Detalhes do Filme (Admin) </h2>
 <img width="1874" height="880" alt="image" src="https://github.com/user-attachments/assets/e5a98782-94fa-4db9-af0c-6de0105f6975" />
 
 
