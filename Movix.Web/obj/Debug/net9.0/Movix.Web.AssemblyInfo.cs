@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Movix.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50651bb72addd610b24174a176ed132ee42fe5bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eee99b98c182e256458ede8cc0934907dd8a87a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Movix.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Movix.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -64,17 +64,17 @@
 
 
 
-		<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top py-2" data-aos="fade-down" data-aos-duration="1500" style="background-color: #000 !important;">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2" data-aos="fade-down" data-aos-duration="1500" style="background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);">
 			<div class="container">
 				<a class="navbar-brand" asp-controller="Home" asp-action="Index">
 					<img src='~/img/Logo.png' alt="Movix" style="height: 80px; width: auto;">
 				</a>
 				
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMovix" aria-controls="navbarMovix" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMovix" aria-controls="navbarMovix" aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgba(0,0,0,0.5);">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<div class="collapse navbar-collapse" id="navbarMovix" style="background-color: #000 !important; z-index: 9999;">
+				<div class="collapse navbar-collapse" id="navbarMovix" style="z-index: 9999;">
 					
 					<!-- Container estilizado estilo cápsula apenas para desktop -->
 					<div class="d-none d-lg-flex mx-auto align-items-center justify-content-center px-4 py-2" 
@@ -102,7 +102,7 @@
 					</div>
 
 					<!-- Lista padrão para mobile (d-lg-none) -->
-					<ul class="navbar-nav d-lg-none ms-auto align-items-center gap-3 mt-3">
+					<ul class="navbar-nav d-lg-none ms-auto align-items-center gap-3 mt-3 p-3 rounded" style="background-color: rgba(0,0,0,0.95);">
 						<li class="nav-item">
 							<a class="nav-link text-white fs-5" asp-controller="Home" asp-action="Index">Início</a>
 						</li>
