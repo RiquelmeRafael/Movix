@@ -1,4 +1,4 @@
- 🎬 Movix
+<h1> 🎬 Movix</h1>
 
 > **Plataforma Moderna de Catálogo e Gestão de Filmes**
 
