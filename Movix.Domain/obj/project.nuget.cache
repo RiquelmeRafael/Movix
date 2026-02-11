@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MQkvKFY0cSI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\regin\\Downloads\\Movix\\Movix.Domain\\Movix.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\regin\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\10.0.0\\microsoft.entityframeworkcore.tools.10.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

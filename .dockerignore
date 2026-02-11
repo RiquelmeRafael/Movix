@@ -1,0 +1,12 @@
+**/.dockerignore
+**/.env
+**/bin
+**/obj
+**/TestResults
+.git
+.github
+.vs
+.vscode
+*.*proj.user
+*.db
+*.lock

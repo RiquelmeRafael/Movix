@@ -1,0 +1,42 @@
+services:
+  movix-db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: movix-db
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Password123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+  movix-api:
+    image: movix-api
+    build:
+      context: .
+      dockerfile: Movix.Api/Dockerfile
+    container_name: movix-api
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=movix-db;Database=MovixDb;User Id=sa;Password=Password123!;TrustServerCertificate=True;
+    ports:
+      - "5000:8080"
+    depends_on:
+      - movix-db
+
+  movix-web:
+    image: movix-web
+    build:
+      context: .
+      dockerfile: Movix.Web/Dockerfile
+    container_name: movix-web
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=movix-db;Database=MovixDb;User Id=sa;Password=Password123!;TrustServerCertificate=True;
+      - ApiBaseUrl=http://movix-api:8080/
+    ports:
+      - "5001:8080"
+    depends_on:
+      - movix-api
+      - movix-db
+
+volumes:
+  sqlserver_data:
