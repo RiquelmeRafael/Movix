@@ -13,21 +13,31 @@ O **Movix** é uma aplicação web completa desenvolvida com as melhores prátic
 
 ## 📸 Demonstração
 
-### 🎥 Vídeo do Projeto
-*(Espaço reservado para o vídeo de demonstração do sistema em funcionamento)*
-<!-- Insira o link do vídeo ou gif aqui -->
-> [!NOTE]
-> Clique na imagem acima para ver o vídeo completo.
+### 🖼️ Imagens do site
 
-### 🖼️ Galeria
+Home
+<img width="1891" height="867" alt="image" src="https://github.com/user-attachments/assets/5a65579e-e5b0-4524-82ac-c349fd1c3f16" />
 
-| Catálogo | Detalhes |
-|:---:|:---:|
-| <!-- Coloque a imagem do catálogo aqui --> ![Catalogo](https://via.placeholder.com/600x300?text=Catalogo+Movix) | <!-- Coloque a imagem de detalhes aqui --> ![Detalhes](https://via.placeholder.com/600x300?text=Detalhes+Filme) |
 
-| Dashboard Admin | Gestão de Filmes |
-|:---:|:---:|
-| <!-- Coloque a imagem do dashboard aqui --> ![Dashboard](https://via.placeholder.com/600x300?text=Admin+Dashboard) | <!-- Coloque a imagem do CRUD aqui --> ![CRUD](https://via.placeholder.com/600x300?text=Gestao+Filmes) |
+Catálogo 
+<img width="1862" height="893" alt="image" src="https://github.com/user-attachments/assets/f28de720-e6e5-45c1-8912-1bc68a733b63" />
+
+Filmes
+<img width="1867" height="852" alt="image" src="https://github.com/user-attachments/assets/c9c375e8-576e-4e21-b7f9-03046d6f4d21" />
+
+
+Dashboard Admin
+<img width="1895" height="882" alt="image" src="https://github.com/user-attachments/assets/fb640575-9573-4657-abc8-13a54c563fa7" />
+
+Gerenciamento
+<img width="1870" height="840" alt="image" src="https://github.com/user-attachments/assets/f3982660-e54a-47b0-bc3c-44c946492d23" />
+
+Detalhes do Filme (Admin)
+<img width="1874" height="880" alt="image" src="https://github.com/user-attachments/assets/e5a98782-94fa-4db9-af0c-6de0105f6975" />
+
+
+
+
 
 ---
 
@@ -115,11 +125,9 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir Issues ou enviar
 4.  Faça o Push (`git push origin feature/MinhaFeature`)
 5.  Abra um Pull Request
 
----
 
-## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
 
 ---
 
